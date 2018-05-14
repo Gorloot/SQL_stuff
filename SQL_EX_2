@@ -1,0 +1,31 @@
+/* Query 1 */
+SELECT last_name, 
+	first_name, 
+    customer_id
+FROM customer
+WHERE customer_id != 77779; 
+
+/* Query 2 */
+SELECT product_name, 
+	description
+FROM product
+WHERE category_id > 21;
+
+/* Query 3 */
+SELECT last_name, 
+	first_name, customer_id,
+    email_address
+FROM customer
+WHERE customer_id = 11119;
+
+/* Query 4 */
+SELECT 
+	item_id AS 'The item_id column' , 
+    item_price 'The item_price column', 
+    discount_amount 'The discount_amount column', 
+    quantity 'The quantity_amount column', 
+    item_price * quantity AS price_total, discount_amount * quantity AS discount_total, 
+    (item_price - discount_amount) * quantity AS item_total
+FROM orderitems
+WHERE (item_price - discount_amount) * quantity > 900
+ORDER BY  (item_price - discount_amount) * quantity DESC;
