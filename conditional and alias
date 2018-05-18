@@ -16,3 +16,19 @@ Select order_id 'The order_id column',
        
 FROM ORDERS
 WHERE ship_date IS NULL;
+
+/* Query 4 */
+SELECT last_name,
+	   First_name
+
+FROM CUSTOMER
+WHERE last_name LIKE '%IN%'
+ORDER BY last_name DESC;
+
+/* Query 5 */
+SELECT product_id 'The product_id column',
+	   product_name 'The product_name column',
+       list_price 'The list_price column'
+
+FROM PRODUCT
+WHERE list_price >30 AND list_price <900;
