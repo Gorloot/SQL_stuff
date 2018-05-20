@@ -38,6 +38,13 @@ SELECT order_id 'The order_id column',
 	   order_date 'The order_date column'
 
 FROM ORDERS
+
+/* Query 6 search pattern operation, having problem to show table */ 
+SELECT order_id 'The order_id column',
+	   order_date 'The order_date column'
+FROM ORDERS
+WHERE order_date LIKE '2015-3%'
+ORDER BY order_date DESC;
 WHERE order_date BETWEEN '2015-03-01' AND '2015-03-31 23:59:59'
 ORDER BY order_date DESC;
 
