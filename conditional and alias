@@ -45,8 +45,7 @@ SELECT order_id 'The order_id column',
 FROM ORDERS
 WHERE order_date LIKE '2015-3%'
 ORDER BY order_date DESC;
-WHERE order_date BETWEEN '2015-03-01' AND '2015-03-31 23:59:59'
-ORDER BY order_date DESC;
+
 
 /* Query 6 logical statement */
 SELECT order_id 'The order_id column',
@@ -54,3 +53,4 @@ SELECT order_id 'The order_id column',
 FROM ORDERS
 WHERE NOT order_date > '2015-4-01'
 ORDER BY order_date DESC;
+
