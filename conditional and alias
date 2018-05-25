@@ -54,3 +54,15 @@ FROM ORDERS
 WHERE NOT order_date > '2015-4-01'
 ORDER BY order_date DESC;
 
+/* Query 7 */
+SELECT order_id 'The order_id column',
+	   ship_date 'The ship_date column'
+FROM ORDERS
+WHERE ship_date > '2015-01-10';
+
+
+/* Query 8 */
+SELECT order_id 'The order_id column',
+	   order_date 'The ship_date column'
+FROM ORDERS
+WHERE order_date <= '2015-04-01 23:59:59';
