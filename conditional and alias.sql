@@ -85,3 +85,17 @@ SELECT product_id,
 FROM PRODUCT
 WHERE category_id in (11, 61) AND vendor_id in (1, 2) AND list_price >= 1100;
 
+/* Query 11 */
+SELECT *
+
+FROM ORDERS
+WHERE ship_date > ADDDATE(order_date, INTERVAL 3 DAY) 
+                  AND ship_date IS NOT NULL;
+
+/* Query 12 */
+SELECT order_id,
+	   customer_id,
+       order_date
+
+FROM ORDERS
+WHERE ship_date IS NOT NULL;
