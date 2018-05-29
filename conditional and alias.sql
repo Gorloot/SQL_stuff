@@ -66,3 +66,22 @@ SELECT order_id 'The order_id column',
 	   order_date 'The ship_date column'
 FROM ORDERS
 WHERE order_date <= '2015-04-01 23:59:59';
+
+/* Query 9 */
+SELECT product_id,
+	   product_code,
+       product_name
+	
+FROM PRODUCT
+WHERE product_name LIKE '_E_L%'
+ORDER BY product_code DESC;
+
+/* Query 10 */
+SELECT product_id,
+	   category_id,
+       vendor_id,
+       list_price
+       
+FROM PRODUCT
+WHERE category_id in (11, 61) AND vendor_id in (1, 2) AND list_price >= 1100;
+
