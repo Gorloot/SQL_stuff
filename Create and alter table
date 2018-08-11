@@ -1,0 +1,38 @@
+CREATE TABLE computer (serial_number CHAR(10),
+					   make CHAR(10) ,
+                       model VARCHAR(50),
+                       processor_type VARCHAR(50),
+                       main_memory VARCHAR(20),
+                       disk_size VARCHAR(10),
+                       PRIMARY KEY (serial_number) )
+					   ENGINE = INNODB;
+
+
+/* Query 2 */
+INSERT INTO computer VALUES(
+		9871234, 'HP', 'Pavilion 500-210qe', 'Intel i5-4530', 
+		'6.0 GBytes', '1.0 TBytes');
+INSERT INTO computer VALUES(
+		9871245, 'HP', 'Pavilion 500-210qe', 'Intel i5-4530', 
+		'6.0 GBytes', '1.0 TBytes');
+INSERT INTO computer VALUES(
+		9871256, 'HP', 'Pavilion 500-210qe', 'Intel i5-4530', 
+		'6.0 GBytes', '1.0 TBytes');
+INSERT INTO computer VALUES(
+		9871267, 'HP', 'Pavilion 500-210qe', 'Intel i5-4530', 
+		'6.0 GBytes', '1.0 TBytes');
+INSERT INTO computer VALUES(
+		9871278, 'HP', 'Pavilion 500-210qe', 'Intel i5-4530', 
+		'6.0 GBytes', '1.0 TBytes');
+
+
+/* Query 3 */
+ALTER TABLE computer
+ADD processor_speed VARCHAR(15);
+
+/* Query 4 */
+SELECT *
+FROM computer;
+
+/* Query 5 */
+DESC computer;
