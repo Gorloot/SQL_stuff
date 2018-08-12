@@ -36,3 +36,28 @@ FROM computer;
 
 /* Query 5 */
 DESC computer;
+
+/* Query 6 */
+ALTER TABLE computer
+DROP COLUMN processor_speed;
+
+/* Query 7 */
+ALTER TABLE computer
+RENAME TO computer_backup;
+
+/* Query 8 */
+SHOW TABLES;
+
+/* Query 9 */
+DROP TABLE computer_backup;
+SHOW TABLES;
+
+/* Query 10 */
+CREATE TABLE borrower (email_address VARCHAR(50));
+
+/* Query 11 */
+ALTER TABLE borrower
+DROP COLUMN email_address;
+
+/* Query 12 */
+DESC borrower;
